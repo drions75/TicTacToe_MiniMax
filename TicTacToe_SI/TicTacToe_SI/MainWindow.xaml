@@ -1,0 +1,78 @@
+﻿<Window x:Class="TicTacToe_SI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe_SI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300" Background="white" MaxHeight="450" MinHeight="450" MaxWidth="300" MinWidth="300">
+
+    <Window.Resources>
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+
+
+
+        </Style>
+    </Window.Resources>
+
+
+    <Grid HorizontalAlignment="Center">
+
+        <Label x:Name="TitleLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Segoe UI Black" Width="130" Content="Tic Tac Toe"></Label>
+        <StackPanel  Margin="10,40,10.333,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="273" Height="220">
+            <StackPanel Margin="0,0,0,0" Height="220">
+                <DockPanel Width="220" Height="55" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button  x:Name="Button0i0" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button0i0_Click" Foreground="{x:Null}" Background="#FF92BAF7" />
+                    <Button  x:Name="Button0i1" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button0i1_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button  x:Name="Button0i2" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button0i2_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button  x:Name="Button0i3" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button0i3_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+
+                </DockPanel>
+                <DockPanel Width="220" Height="55" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="Button1i0" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button1i0_Click" Foreground="{x:Null}" Background="#FF92BAF7" />
+                    <Button x:Name="Button1i1" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button1i1_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button1i2" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button1i2_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button1i3" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button1i3_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+
+                </DockPanel>
+                <DockPanel Width="220" Height="55" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="Button2i0" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button2i0_Click" Foreground="{x:Null}" Background="#FF92BAF7" />
+                    <Button x:Name="Button2i1" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button2i1_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button2i2" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button2i2_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button2i3" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button2i3_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+
+                </DockPanel>
+                <DockPanel Width="220" Height="55" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="Button3i0" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button3i0_Click" Foreground="{x:Null}" Background="#FF92BAF7" />
+                    <Button x:Name="Button3i1" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button3i1_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button3i2" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button3i2_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+                    <Button x:Name="Button3i3" Style="{StaticResource TransparentStyle}" Width="55" Height="55"  BorderBrush="Black" Click="Button3i3_Click" Foreground="{x:Null}" Background="#FF92BAF7"/>
+
+                </DockPanel>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom"  Width="293" Height="126" Margin="0,0,-1,18" >
+            <Grid Background="#FF92BAF7" Height="37">
+                <Label x:Name="WynikX"  Margin="15,8,47,3"  HorizontalContentAlignment="Left" Content="🗙 - " FontFamily="Sitka Display" FontWeight="Bold"/>
+                <Label x:Name="StatusLabel"  Margin="77,8,78,3" FontSize="10" VerticalContentAlignment="Center" Height="26" Width="138" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="GAME STATUS" FontWeight="Bold"></Label>
+                <Label x:Name="WynikO"  Margin="15,8,16,3"  HorizontalContentAlignment="Right" Content="◯ - " FontFamily="Sitka Display" FontWeight="Bold"/>
+            </Grid>
+            <StackPanel Height="93" Margin="0,0,0,0">
+                <Grid Height="41" Margin="77,0"/>
+                <Grid Width="190" Height="38" Margin="52,0,51,15" >
+                    <Button x:Name="exitButton" Width="90" Height="20" HorizontalAlignment="Right" Content="EXIT" Click="ExitButton_Click" FontFamily="Segoe UI Semibold" Background="#FFAFE516" BorderBrush="{x:Null}" Margin="0,9,51,9"/>
+                    <Button Width="33" Height="20" HorizontalAlignment="Left" Content="3x3"  Click="game3x3" FontFamily="Segoe UI Semibold" Background="#FFAFE516" BorderBrush="{x:Null}" Margin="144,5,0,5"/>
+                    <Button Width="80" Height="20" HorizontalAlignment="Left" Content="Klein Bottle"  Click="KleinButton" FontFamily="Segoe UI Semibold" Background="#FFAFE516" BorderBrush="{x:Null}" Margin="-36,5,0,5" VerticalAlignment="Center"/>
+                    <Button Width="33" Height="20" HorizontalAlignment="Left" Content="4x4"  Click="game4x4" FontFamily="Segoe UI Semibold" Background="#FFAFE516" BorderBrush="{x:Null}" Margin="182,5,-25,5"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="53,-30,32,0" Content="Human vs Human" Width="105"/>
+
+                    <CheckBox Content="CheckBox" Margin="35,-24,137,42" Checked="pvpEnbale" Unchecked="pvpdisable"/>
+                </Grid>
+
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
